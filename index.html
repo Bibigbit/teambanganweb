@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="TeamBangan.css">
+  <title>Memory Card Game</title>
+</head>
+
+<body>
+
+  <div id="start-page">
+    <div id="button-container">
+      <button onclick="showHowToPlay()">How to play</button>
+    </div>
+    <div id="difficulty-buttons">
+      <button onclick="startGame('novice')">Novice</button>
+      <button onclick="startGame('intermediate')">Intermediate</button>
+      <button onclick="startGame('expert')">Expert</button>
+    </div>
+  </div>
+
+  <div id="game-page" style="display: none;">
+    <a href="#" onclick="goToStartPage()" id="back-arrow">&#8592; Back</a>
+    <div id="game-container">
+      <div id="game-board"></div>
+      <div id="game-info">
+        <span id="time">Time: 0s</span>
+        <span id="wrong-guesses">Wrong Guesses: 0</span>
+      </div>
+    </div>
+  </div>
+  <div id="win-popup" class="popup" onclick="showPopup('win-popup')">
+    <div class="popup-content">
+      <p>You Win!</p>
+      <p><span id="win-popup-time">Time: 0s</span></p>
+      <p><span id="win-popup-wrong-guesses">0</span></p>
+      <p>Click anywhere to continue</p>
+    </div>
+  </div>
+  <div id="how-to-play-popup" class="popup" onclick="hidePopup('how-to-play-popup')">
+    <div class="popup-content">
+      <p>How to play?</p>
+      <p>1. Click on cards to reveal their numbers.</p>
+      <p>2. Try to find matching pairs of numbers.</p>
+      <p>3. The game is won when all pairs are matched.</p>
+      <p>4. Be careful, wrong guesses are counted!</p>
+      <p>5. When difficulties are higher, the less guesses you have.</p>
+      <p>Good luck and enjoy the game!</p>
+      <p>Click anywhere to continue</p>
+    </div>
+  </div>
+  <div id="game-over-popup" class="popup" onclick="hidePopup('game-over-popup')">
+    <div class="popup-content">
+      <p>Game Over!</p>
+      <p id="game-over-message"></p>
+      <p>Choose a difficulty and try again.</p>
+    </div>
+  </div>
+
+  <script src="TeamBangan.js"></script>
+</body>
+
+</html>
